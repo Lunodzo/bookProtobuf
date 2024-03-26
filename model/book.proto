@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "go/protobuf/model";
+message Book{
+    int32 Id = 1;
+    string Title = 2;
+    repeated Author Author = 3;
+    Category Category = 4;
+}
+
+enum Category{
+    FICTION = 0;
+    NON_FICTION = 1;
+    SCIENCE = 2;
+    MATH = 3;
+}
+
+message Author{
+    int32 Id = 1;
+    string Name = 2;
+    string Email = 3;
+    string Phone = 4;
+}
